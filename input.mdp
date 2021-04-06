@@ -1,0 +1,60 @@
+; SYSTEM FLAGS 
+; ========================================== 
+tesselation = yes         ; yes(default)/no       
+system = bilayer          ; monolayer(default)/bilayer 
+procedure = 1             ; 1=testing,  2=stats (default), 3=line-tension. 
+clustering = 1            ; 1=Pz (Default),  2=m6,  3=Pz & m6 
+
+rcut_h = 2.20		      ; Head beads cutoff raddi
+rcut_t = 2.20             ; Tail cutoff raddi
+
+rcut_vll = 0.66		      ; Voronoi cutoff raddi lipid-lipid
+rcut_vlp = 0.66		      ; Voronoi cutoff lipid-protein bead
+rcut_vpp = 0.66		      ; Voronoi cutoff protein-protein beads
+
+; CURVATURE FLAG0 
+; ========================================== 
+curvature = 3             ; 0=nothing(default), 1=midplane, 2=monolayer(s), 3=midplane and monolayer
+geometry = 1              ; 1=Planar, 2=Polar, 3=spherical
+filter-type = 1           ; 1=Binomial filter (default), 2=MEX wavelet shifted, 3=MEX wavelet
+filter-width = 9 	      ; filter width 
+filter-shift = 0.01       ; Optional shift constant
+filter-delta = 0.3        ; grid spacing for binomial filter, typically 0.6 
+; filter-nbin = 30        ; Number of bins for filttering
+filter-opt = 0            ; Extra optional flag
+
+; TRAYECTORY ANALYSES
+; ==========================================
+; frames = first last skip
+frames = 1 5000 1
+
+
+; LIPID GROUPS INFORMATION  
+; ========================================== 
+l-ngrps = 2     	      ; number of lipid groups, Default=2 
+l-grp1 = file 
+l-grp2 = file             ; reads data from file l-grp1.dat etc
+ 
+; PROTEINS  
+; ========================================== 
+p-grps = 4                ; Number of proteins in your system, Default=0  
+p-grp1 = P_1A 
+p-grp2 = P_2A
+p-grp3 = P_3A
+p-grp4 = P_4A
+
+
+
+; Protein Definitions
+; ------------------------------------------
+; add the first and final BB residue for each 
+; protein in your system.
+p1-Calpha = BB	1	678
+p2-Calpha = BB	679	1356
+p3-Calpha = BB	1357	2034
+p4-Calpha = BB	2035	2712
+
+
+enrich    =   1 
+; ensity   =   1
+end             
