@@ -1,5 +1,5 @@
 # g_surf
-Analyze membrane thickness and curvature profiles
+Analyze membrane thickness and curvature profiles. Note that currently it only supports the Martini model. 
 
 This repository contains the binary for `g_surf`, a program to calcualte membrane physical properites. 
 `g_surf` can calculate membrane densities, thickness, and gaussian as well as mean curvature profiles. 
