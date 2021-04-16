@@ -1,6 +1,9 @@
 # g_surf
 Analyze membrane thickness and curvature profiles. Note that currently it only supports the Martini model. 
 
+
+Note: We are working on writing some tutorials on how to use g_surf and also integrate it as part of `prolintpy`. In the meantime, please have a look at the following link to see how g_surf is used within the ProLint framework: https://github.com/ProLint/ProLint/blob/main/prolint/calcul/tasks.py#L373
+
 This repository contains the binary for `g_surf`, a program to calcualte membrane physical properites. 
 `g_surf` can calculate membrane densities, thickness, and gaussian as well as mean curvature profiles. 
 
