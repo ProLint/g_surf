@@ -4,7 +4,8 @@ Analyze membrane thickness and curvature profiles. Note that currently it only s
 
 Note: We are working on writing some tutorials on how to use g_surf and also integrate it as part of `prolintpy`. In the meantime, please have a look at the following link to see how g_surf is used within the ProLint framework: https://github.com/ProLint/ProLint/blob/main/prolint/calcul/tasks.py#L373
 
-This repository contains the binary for `g_surf`, a program to calcualte membrane physical properites. 
+This repository contains the binary for `g_surf`, a program to calcualte membrane physical properites. The source code is available here: https://github.com/IBIxsoftware/g_surf
+
 `g_surf` can calculate membrane densities, thickness, and gaussian as well as mean curvature profiles. 
 
 To use `g_surf` you need the following: 
@@ -21,3 +22,6 @@ g_surf -f protein.mdp -tr trajectory.xtc -c coordinates.gro -po out.mdp
 ```
 
 You can tweak many of the options used by `g_surf` by modifying the input `mdp` file. For example, if you want to calculate the density of cholesterol in the system, you make sure to uncomment the adequate line in the input mdp file, put CHOL in the l-grp1.dat file and put all the other lipids in the l-grp2.dat file (separated by newline). 
+
+## Python Wrapper
+We will soon release a python wrapper script that you can use to interface with `g_surf`. For now, you can have a look at how ProLint uses it in its workflow here: https://github.com/ProLint/ProLint/blob/main/prolint/calcul/tasks.py#L323 which accomplishes largely the same thing. 
