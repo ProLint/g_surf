@@ -25,3 +25,22 @@ You can tweak many of the options used by `g_surf` by modifying the input `mdp` 
 
 ## Python Wrapper
 We will soon release a python wrapper script that you can use to interface with `g_surf`. For now, you can have a look at how ProLint uses it in its workflow here: https://github.com/ProLint/ProLint/blob/main/prolint/calcul/tasks.py#L323 which accomplishes largely the same thing. 
+
+## Citation
+ProLint and its associated tools are research software. If you make use of them in work which you publish, please cite them. The BibTeX reference is
+
+```
+@article{10.1093/nar/gkab409,
+    author = {Sejdiu, Besian I and Tieleman, D Peter},
+    title = "{ProLint: a web-based framework for the automated data analysis and visualization of lipid–protein interactions}",
+    journal = {Nucleic Acids Research},
+    year = {2021},
+    month = {05},
+    issn = {0305-1048},
+    doi = {10.1093/nar/gkab409},
+    url = {https://doi.org/10.1093/nar/gkab409},
+    note = {gkab409},
+    eprint = {https://academic.oup.com/nar/advance-article-pdf/doi/10.1093/nar/gkab409/38270894/gkab409.pdf},
+}
+```
+  
